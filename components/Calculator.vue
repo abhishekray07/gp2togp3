@@ -1,17 +1,15 @@
 <template>
-  <div class="min-h-screen flex flex-col items-center bg-gray-100 py-5">
-    <h1 class="text-2xl font-bold mb-4">
+  <div class="min-h-screen flex flex-col items-center bg-gray-100 py-5 px-4">
+    <h1 class="text-2xl md:text-3xl font-bold mb-4">
       AWS EBS gp2 to gp3 Savings Calculator
     </h1>
-
-    <p class="font-semibold text-normal mb-4">Current gp2 Volume</p>
-
     <form
-      class="w-1/3 sm:w-1/2"
+      class="w-full xl:w-1/2"
       v-on:submit.prevent="calculateSavings"
       method="POST"
       action="#"
     >
+      <p class="font-semibold text-normal mb-4">Current gp2 Volume</p>
       <div class="bg-white p-5 rounded-lg shadow-md">
         <div class="mb-4 mt-4">
           <label for="gp2Size" class="block text-sm font-medium text-gray-600"
@@ -49,7 +47,6 @@
           />
         </div>
       </div>
-
       <p class="font-semibold text-normal mt-6 mb-2">Equivalent gp3 Volume</p>
       <div class="bg-white p-5 rounded-lg shadow-md mt-2">
         <div class="mb-4">
@@ -109,7 +106,7 @@
         {{ reductionPercentage.toFixed(2) }}%
       </p>
     </div>
-    <div class="mt-5 w-full max-w-2xl">
+    <div class="mt-5">
       <table class="min-w-full divide-y divide-gray-200">
         <thead>
           <tr class="bg-gray-50">
